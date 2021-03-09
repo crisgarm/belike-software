@@ -39,7 +39,9 @@ function checkPassword(input) {
 }
 
 function checkPasswordsMatch(input1, input2) {
-  if (input1.value !== input2.value) {
+  if (input1.value === input2.value) {
+    showSuccess(input2);
+  } else {
     showError(input2, "Las contraseñas no coinciden");
   }
 }
