@@ -38,10 +38,17 @@ function checkPassword(input) {
   }
 }
 
+function checkPasswordsMatch(input1, input2) {
+  if (input1.value !== input2.value) {
+    showError(input2, "Las contraseñas no coinciden");
+  }
+}
+
 function handleSubmit(ev) {
   ev.preventDefault();
   checkUsername(username);
   checkPassword(password);
+  checkPasswordsMatch(password, confirmPassword);
 }
 
 form.addEventListener("submit", handleSubmit);
