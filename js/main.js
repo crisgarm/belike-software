@@ -1,9 +1,11 @@
 "use strict";
 
 const form = document.querySelector(".js-form");
+const inputArray = document.querySelectorAll(".form__input");
 const username = document.querySelector(".js-username");
 const password = document.querySelector(".js-password");
 const confirmPassword = document.querySelector(".js-confirmPassword");
+const button = document.querySelector(".js-button");
 
 function showError(input, message) {
   const small = input.nextElementSibling;
@@ -15,6 +17,7 @@ function showSuccess(input) {
   const small = input.nextElementSibling;
   small.classList.remove("error");
   small.innerHTML = "";
+  checkButton();
 }
 
 function checkUsername(input) {
@@ -46,11 +49,28 @@ function checkPasswordsMatch(input1, input2) {
   }
 }
 
-function handleSubmit(ev) {
-  ev.preventDefault();
+function handleChange() {
   checkUsername(username);
   checkPassword(password);
   checkPasswordsMatch(password, confirmPassword);
 }
 
+inputArray.forEach((input) => {
+  input.addEventListener("keydown", handleChange);
+});
+
+function handleSubmit(ev) {
+  ev.preventDefault();
+}
+
 form.addEventListener("submit", handleSubmit);
+
+function checkButton() {
+  if (
+    username.value !== "" &&
+    password.value !== "" &&
+    password.value === confirmPassword.value
+  ) {
+    button.disabled = false;
+  }
+}
