@@ -56,7 +56,7 @@ function handleChange() {
 }
 
 inputArray.forEach((input) => {
-  input.addEventListener("keydown", handleChange);
+  input.addEventListener("change", handleChange);
 });
 
 function handleSubmit(ev) {
@@ -74,3 +74,12 @@ function checkButton() {
     button.disabled = false;
   }
 }
+
+function setLocalStorage() {
+  const inputValue = username.value;
+
+  localStorage.setItem("username", inputValue);
+  location.href = "user.html";
+}
+
+button.addEventListener("click", setLocalStorage);
