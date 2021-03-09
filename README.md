@@ -1,6 +1,6 @@
 # Formulario Sign Up
 
-![Preview project](./images/preview-project.PNG)
+<img alt="Previsualización aplicación" title="Previsualización aplicación" src="./images/preview-project.PNG" width=550px/>
 
 ## Objetivo:
 
