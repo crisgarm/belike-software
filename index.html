@@ -9,20 +9,20 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <title>BeLike Software</title>
   </head>
   <body>
     <main class="main">
       <h1 class="main__title">Crear cuenta</h1>
-      <form action="" class="form">
+      <form action="" class="form js-form">
         <label class="form__label" for="username">Nombre de usuario</label>
         <input
           type="text"
           name="username"
           id="username"
           placeholder="Introduce tu nombre de usuario"
-          class="form__input"
+          class="form__input js-username"
         />
         <label class="form__label" for="password">Contraseña</label>
         <input
@@ -30,7 +30,7 @@
           name="password"
           id="password"
           placeholder="Introduce la contraseña"
-          class="form__input"
+          class="form__input js-password"
         />
         <label class="form__label" for="confirmPassword"
           >Confirmar contraseña</label
@@ -40,11 +40,11 @@
           name="confirmPassword"
           id="confirmPassword"
           placeholder="Confirma la contraseña"
-          class="form__input"
+          class="form__input js-confirmPassword"
         />
-        <button class="form__button">Registrarse</button>
+        <button type="submit" class="form__button">Registrarse</button>
       </form>
     </main>
-    <script type="text/javascript" src="./js/mainAfterRefactor.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
