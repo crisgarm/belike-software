@@ -1,4 +1,5 @@
 "use strict";
 
 const inputUsernameValue = document.querySelector(".js-text");
-inputUsernameValue.innerHTML = localStorage.getItem("username");
+inputUsernameValue.innerHTML =
+  "¡Hola" + " " + localStorage.getItem("username") + "!";
