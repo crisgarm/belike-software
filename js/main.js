@@ -7,6 +7,7 @@ const passwordInput = document.querySelector(".js-password");
 const confirmPasswordInput = document.querySelector(".js-confirmPassword");
 const submitButton = document.querySelector(".js-button");
 
+//Flag
 let errors = {
   username: true,
   password: true,
@@ -19,20 +20,15 @@ const passwordValidation = /^(?=(?:.*[A-Z]){1})(?=(?:.*[#]))\S{8,}$/;
 
 //Validations
 function handleValidations(ev) {
-  console.log(`Input: ${ev.target.id}, value: ${ev.currentTarget.value}`);
-
   if (ev.target.id === "username") {
-    console.log("Username validation");
     checkUsername(usernameInput);
   }
 
   if (ev.target.id === "password") {
-    console.log("Password validation");
     checkPassword(passwordInput);
   }
 
   if (ev.target.id === "confirmPassword") {
-    console.log("Confirm password validation");
     checkPasswordsMatch(passwordInput, confirmPasswordInput);
   }
 
@@ -97,7 +93,6 @@ function showSuccess(input) {
 
 //Control errors
 function submitController() {
-  console.log(errors);
   if (errors.username || errors.password || errors.confirmPassword) {
     submitButton.toggleAttribute("disabled", true);
   } else {
