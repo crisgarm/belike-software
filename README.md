@@ -4,7 +4,7 @@
 
 ## Objetivo:
 
-El ejercicio consiste en desarrollar un formulario de registro con una serie de validaciones. Una vez la usuaria se ha registrado, le aparecerá la intranet con el nombre con el que se ha registrado.
+El ejercicio consiste en desarrollar un formulario de registro con una serie de validaciones. Una vez la usuaria se ha registrado, le aparecerá la intranet con el nombre elegido.
 
 ## Tecnologías utilizadas:
 
