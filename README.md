@@ -1,6 +1,6 @@
 # Formulario Sign Up
 
-<img alt="Previsualización aplicación" title="Previsualización aplicación" src="./images/preview-project.PNG" width=550px/>
+<img alt="Previsualización aplicación" title="Previsualización aplicación" src="./images/project-preview.png" width=550px/>
 
 ## Objetivo:
 
@@ -14,4 +14,4 @@ El ejercicio consiste en desarrollar un formulario de registro con una serie de 
 
 ## Demo:
 
-Para ver el resultado de la aplicación puedes visitar el siguiente enlace: https://crisgarm.github.io/belike-software/
+Para ver el resultado de la aplicación puedes visitar el siguiente enlace: https://crisgarm.github.io/sign-up-form/

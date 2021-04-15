@@ -5,26 +5,20 @@
   font-family: "Poppins", sans-serif;
 }
 
-.header__userPage {
+.main__userPage {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
-}
-
-.header__image {
-  height: 80px;
-}
-
-.header__text {
-  margin-right: 10px;
-  color: #94abb6;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.main__userPage {
   height: 100vh;
-  background-color: #12445d;
+  background: linear-gradient(
+    90deg,
+    rgba(222, 0, 255, 1) 0%,
+    rgba(115, 0, 255, 1) 100%
+  );
+}
+
+.main__text {
+  color: #ffffff;
+  font-size: 50px;
 }

@@ -10,20 +10,36 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #12445d;
+  background-image: url(../images/wave.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 .main {
   border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  width: 500px;
-  background-color: #dbdbdb;
+  width: 400px;
 }
 
 .main__title {
   text-align: center;
-  padding: 15px;
-  color: #12445d;
+  padding-bottom: 15px;
+  color: #5b527c;
+  position: relative;
+  font-size: 30px;
+}
+
+.main__title::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  height: 5px;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 213, 0, 1) 0%,
+    rgba(112, 14, 144, 1) 79%
+  );
 }
 
 .form {
@@ -34,7 +50,7 @@ body {
   display: block;
   margin: 20px 0 5px 0;
   font-size: 16px;
-  color: #12445d;
+  color: #de00ff;
 }
 
 .form__input {
@@ -43,16 +59,24 @@ body {
   display: block;
   width: 100%;
   padding: 10px;
-  outline-color: #12445d;
+  outline-color: #5b527c;
+  background-color: rgba(224, 224, 224, 0.925);
 }
 
 .form__button {
-  margin: 20px 0;
-  padding: 10px;
-  width: 100%;
-  background-color: #12445d;
-  border-color: #12445d;
-  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 35px;
+  padding: 12px;
+  width: 40%;
+  background: linear-gradient(
+    90deg,
+    rgba(222, 0, 255, 1) 0%,
+    rgba(115, 0, 255, 1) 100%
+  );
+  border: none;
+  border-radius: 25px;
   color: #f0f0f0;
 }
 
@@ -62,4 +86,21 @@ body {
 
 .error {
   color: red;
+}
+
+.js-username {
+  background-image: url(../images/user-icon.png);
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 30px;
+}
+
+.js-password,
+.js-confirmPassword {
+  background-image: url(../images/password-icon.png);
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 30px;
 }
