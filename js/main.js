@@ -3,6 +3,7 @@
 const form = document.querySelector(".js-form");
 const inputArray = document.querySelectorAll(".form__input");
 const usernameInput = document.querySelector(".js-username");
+const emailInput = document.querySelector(".js-email");
 const passwordInput = document.querySelector(".js-password");
 const confirmPasswordInput = document.querySelector(".js-confirmPassword");
 const submitButton = document.querySelector(".js-button");
@@ -10,18 +11,24 @@ const submitButton = document.querySelector(".js-button");
 //Flag
 let errors = {
   username: true,
+  email: true,
   password: true,
   confirmPassword: true,
 };
 
 //Regex
 const usernameValidation = /^[A-Za-z0-9\s]+$/g;
+const emailValidation = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const passwordValidation = /^(?=(?:.*[A-Z]){1})(?=(?:.*[#]))\S{8,}$/;
 
 //Validations
 function handleValidations(ev) {
   if (ev.target.id === "username") {
     checkUsername(usernameInput);
+  }
+
+  if (ev.target.id === "email") {
+    checkEmail(emailInput);
   }
 
   if (ev.target.id === "password") {
@@ -55,6 +62,16 @@ function checkUsername(input) {
     showError(input, "El nombre del usuario no es válido");
   }
 }
+
+//Check email
+function checkEmail(input) {
+  if (input.value.match(emailValidation)) {
+    showSuccess(input);
+  } else {
+    showError(input, "El email no es válido");
+  }
+}
+
 //Check password
 function checkPassword(input) {
   if (input.value.match(passwordValidation)) {
@@ -93,10 +110,16 @@ function showSuccess(input) {
 
 //Control errors
 function submitController() {
-  if (errors.username || errors.password || errors.confirmPassword) {
+  if (
+    errors.username ||
+    errors.email ||
+    errors.password ||
+    errors.confirmPassword
+  ) {
     submitButton.toggleAttribute("disabled", true);
   } else {
     submitButton.toggleAttribute("disabled", false);
+    submitButton.style.cursor = "pointer";
   }
 }
 
