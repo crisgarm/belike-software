@@ -1,6 +1,6 @@
 # Formulario Sign Up
 
-<img alt="Previsualización aplicación" title="Previsualización aplicación" src="./images/project-preview.png"/>
+<img alt="Previsualización aplicación" title="Previsualización aplicación" src="./images/preview-project.png"/>
 
 ## Objetivo:
 
